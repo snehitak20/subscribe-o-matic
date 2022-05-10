@@ -6,11 +6,6 @@
     min-height: 100%;
 }
 
-
-/* .video {
-    z-index: 0;
-} */
-
 .form-area {
     display: flex;
     justify-content: center;
@@ -18,16 +13,50 @@
     position: absolute;
     margin-top: 15%;
     margin-left: 25%;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.75);
-    background: rgba(244, 244, 245, 0.08);
-    padding: 50px;
+    box-shadow: 0 0 20px 0 rgb(14, 181, 223);
+    background: rgba(57, 62, 63, 0.3);
+    padding: 40px;
+    color: white;
+    border-radius: 20px;
 }
 
 .form-text {
     font-family: 'Libre Barcode 39 Text', cursive;
-    color: rgb(41, 172, 154);
+    font-size: x-large;
+    color: rgb(0, 0, 0);
+    height: 100%;
+    width: 100%;
 }
 
-.loginbtn {
-    color: rgb(43, 194, 174);
+.form-text h1 {
+    text-align: center;
+    margin: 35px 0;
+    font-size: 42px;
+    color: white;
+}
+
+.form-text input {
+    display: block;
+    width: 250px;
+    margin: 20px auto;
+    padding: 10px 15px;
+    color: rgb(0, 0, 0);
+    border: 0;
+    font-size: 20px;
+    font-family: 'Teko', sans-serif;
+    border-radius: 8px;
+    box-shadow: 0 0 8px 0 rgb(14, 181, 223);
+}
+
+.form-text button {
+    width: 350px;
+    margin: 10px auto;
+    display: block;
+    cursor: pointer;
+    border: 0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px 0 rgb(14, 181, 223);
+    color: rgb(0, 0, 0);
+    font-size: 25px;
 }
