@@ -18,18 +18,18 @@ router.get('/', async (req, res) => {
 })
 //router.get('/team/:id', async (req, res)=> {
 // find team data by id
-//query clientside api
+//query api
 //})
 
-router.get('/profile', withAuth, async (req, res) => {
-    try{
-        //find user data by id
-        //include subscriptions
-        //??query clientside api?
-    } catch (err) {
-        res.status(500).json(err);
-    }
-})
+// router.get('/profile', withAuth, async (req, res) => {
+//     try{
+//         //find user data by id
+//         //include subscriptions
+//         //??query clientside api?
+//     } catch (err) {
+//         res.status(500).json(err);
+//     }
+// })
 
 
 //render login if not logged in or profile if logged in
@@ -39,3 +39,5 @@ router.get('/login', (req,res)=> {
     // }
     res.render('login')
 })
+
+module.exports = router;
