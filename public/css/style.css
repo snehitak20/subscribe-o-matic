@@ -1,0 +1,33 @@
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
+/* .video {
+    z-index: 0;
+} */
+
+.form-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: 15%;
+    margin-left: 25%;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.75);
+    background: rgba(244, 244, 245, 0.08);
+    padding: 50px;
+}
+
+.form-text {
+    font-family: 'Libre Barcode 39 Text', cursive;
+    color: rgb(41, 172, 154);
+}
+
+.loginbtn {
+    color: rgb(43, 194, 174);
+}
