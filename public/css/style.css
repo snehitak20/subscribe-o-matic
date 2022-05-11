@@ -61,8 +61,6 @@
     font-size: 25px;
 }
 
-
-/* 
 a {
     text-decoration: none;
 }
@@ -127,7 +125,7 @@ header {
     text-shadow: 20px rgb(0, 0, 0);
 }
 
-body {
+.main {
     background-color: black;
 }
 
@@ -145,4 +143,4 @@ body {
 
 .sub:hover {
     color: rgb(0, 0, 0);
-} */
+}
