@@ -7,7 +7,7 @@ User.hasMany(Subscribe, {
     onDelete: 'CASCADE'
 });
 
-Subscribe.belongTo(User, {
+Subscribe.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
@@ -15,7 +15,7 @@ Team.hasMany(Subscribe,{
     foreignKey: 'team_id',
     onDelete: 'CASCADE'
 })
-Subscribe.belongTo(Team, {
+Subscribe.belongsTo(Team, {
     foreignKey: 'team_id'
 });
 
