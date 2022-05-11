@@ -14,6 +14,7 @@ const signupFormHandler = async (event) => {
 
         if (response.ok) {
             document.location.replace('/team');
+            
         } else {
             alert(response.statusText);
         }
