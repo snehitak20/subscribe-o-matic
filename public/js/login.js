@@ -20,5 +20,11 @@ const loginFormHandler = async(event) => {
 };
 
 document
+<<<<<<< HEAD
     .querySelector('.login-form')
     .addEventListener('submit', loginFormHandler);
+=======
+  .querySelector('.login-form')
+  .addEventListener('submit', loginFormHandler);
+
+>>>>>>> 3884389f30f2ffef3c66302c2a7d75f8cdfca001
