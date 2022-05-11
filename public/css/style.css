@@ -7,12 +7,12 @@
 }
 
 .form-area {
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     position: absolute;
     margin-top: 15%;
-    margin-left: 25%;
+    margin-left: 18%;
     box-shadow: 0 0 20px 0 rgb(14, 181, 223);
     background: rgba(57, 62, 63, 0.3);
     padding: 40px;
@@ -49,7 +49,7 @@
 }
 
 .form-text button {
-    width: 350px;
+    width: 300px;
     margin: 10px auto;
     display: block;
     cursor: pointer;
@@ -59,6 +59,23 @@
     box-shadow: 0 0 8px 0 rgb(14, 181, 223);
     color: rgb(0, 0, 0);
     font-size: 25px;
+}
+
+.signupbtn .btnn {
+    width: 300px;
+    margin: 10px auto;
+    display: block;
+    cursor: pointer;
+    border: 0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px 0 rgb(14, 181, 223);
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    font-family: 'Libre Barcode 39 Text', cursive;
+    font-size: x-large;
+    /* margin-top: 138%;
+    margin-left: -100%; */
 }
 
 a {
