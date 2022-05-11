@@ -60,3 +60,87 @@
     color: rgb(0, 0, 0);
     font-size: 25px;
 }
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 70px;
+    padding-top: 20px;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav-area {
+    list-style: none;
+}
+
+.nav-area li {
+    display: inline-block;
+    padding: 0 15px;
+    text-transform: uppercase;
+}
+
+.nav-area li a {
+    transition: .3s;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    letter-spacing: 8px;
+    font-family: 'Teko', sans-serif;
+    color: white;
+}
+
+.nav-area li a:hover {
+    color: rgb(14, 181, 223);
+}
+
+.btn-area {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: rgb(14, 181, 223);
+    font-family: 'Teko', sans-serif;
+}
+
+.card {
+    display: grid;
+    font-family: 'Teko', sans-serif;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgb(67, 181, 216);
+    text-align: center;
+    margin: 2%;
+    background-color: rgb(14, 181, 223);
+    font-size: 23px;
+    color: white;
+    text-shadow: 20px rgb(0, 0, 0);
+}
+
+body {
+    background-color: black;
+}
+
+.sub {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 5px;
+    border-radius: 5px;
+    background-color: rgb(14, 181, 223);
+    font-family: 'Teko', sans-serif;
+}
+
+.sub:hover {
+    color: rgb(0, 0, 0);
+}
