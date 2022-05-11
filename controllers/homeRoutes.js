@@ -2,20 +2,16 @@ const router = require('express').Router();
 // const {User, Team, Subscribe} = require('../models');
 // const withAuth = require('../utils/auth');
 
-//render homepage with teams
+//render login 
 router.get('/', async (req, res) => {
     try {
-        //find all teams, map team data, render on homepage
-        //const teamData = await Team.findAll
-        //const teams = teamData.map((team) => blog.get({plain:true}));
-
-        //render should take in ,{teams, logged_in: req.session.logged_in}
         res.render('login')
     }
-    catch(err) {
+    catch (err) {
         res.status(500).json(err)
     }
 })
+//render a teams stats
 //router.get('/team/:id', async (req, res)=> {
 // find team data by id
 //query api
@@ -31,13 +27,23 @@ router.get('/', async (req, res) => {
 //     }
 // })
 
+// router.get('/team', async (req, res) => {
+//find all teams, map team data, render on homepage
+//const teamData = await Team.findAll
+//const teams = teamData.map((team) => blog.get({plain:true}));
+//render should take in ,{teams, logged_in: req.session.logged_in}
+//})
 
 //render login if not logged in or profile if logged in
-router.get('/login', (req,res)=> {
-    // if (req.session.logged) {
-    // res.redirect('/profile')
-    // }
+router.get('/login', (req, res) => {
+    if (req.session.logged) {
+        res.redirect('/team')
+    }
     res.render('login')
+})
+
+router.get('/about', (req, res) => {
+    res.render('about')
 })
 
 module.exports = router;
