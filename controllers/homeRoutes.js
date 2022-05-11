@@ -27,12 +27,12 @@ router.get('/', async (req, res) => {
 //     }
 // })
 
-// router.get('/team', async (req, res) => {
+//router.get('/team', async (req, res) => {
 //find all teams, map team data, render on homepage
-//const teamData = await Team.findAll
-//const teams = teamData.map((team) => blog.get({plain:true}));
-//render should take in ,{teams, logged_in: req.session.logged_in}
-//})
+// const teamData = await Team.findAll
+// const teams = teamData.map((team) => team.get({plain:true}));
+// render should take in ,{teams, logged_in: req.session.logged_in}
+// })
 
 //render login if not logged in or profile if logged in
 router.get('/login', (req, res) => {
