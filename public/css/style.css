@@ -23,7 +23,7 @@
     position: absolute;
     margin-top: 15%;
     margin-left: 18%;
-    box-shadow: 0 0 20px 0 rgb(14, 181, 223);
+    box-shadow: 0 0 20px 0 rgb(11, 109, 155);
     background: rgba(57, 62, 63, 0.3);
     padding: 40px;
     color: white;
@@ -55,7 +55,7 @@
     font-size: 20px;
     font-family: 'Teko', sans-serif;
     border-radius: 8px;
-    box-shadow: 0 0 8px 0 rgb(14, 181, 223);
+    box-shadow: 0 0 8px 0 rgb(11, 109, 155);
 }
 
 .form-text button {
@@ -98,7 +98,7 @@ header {
     align-items: center;
     justify-content: center;
     padding: 30px 70px;
-    padding-top: 20px;
+    padding-top: 50px;
     z-index: 9999;
     font-family: 'Teko', sans-serif;
 }
@@ -109,6 +109,7 @@ header {
     left: 0;
     top: 0;
     margin-top: -100px;
+    z-index: 99999;
 }
 
 .signinlogo {
@@ -156,17 +157,25 @@ header {
     padding: 10px 15px;
     border-radius: 5px;
     background-color: rgb(14, 181, 223);
+    box-shadow: 0px 0px 12px 1px rgb(255, 255, 255);
     font-family: 'Teko', sans-serif;
     position: absolute;
     right: 0;
-    top: 0;
+    top: 10;
+    margin-right: 20px;
+}
+
+.btn-area:hover {
+    color: rgb(0, 0, 0);
+    background-color: white;
+    transition: 0.5s;
 }
 
 .card {
     display: grid;
     font-family: 'Teko', sans-serif;
     border-radius: 10px;
-    box-shadow: 5px 5px 15px rgb(67, 181, 216);
+    box-shadow: 0px 0px 12px 3px rgb(255, 255, 255);
     text-align: center;
     margin: 2%;
     background-color: rgb(14, 181, 223, 0.7);
@@ -175,12 +184,29 @@ header {
     text-shadow: 20px rgb(0, 0, 0);
     width: 30%;
     margin-left: 35%;
+    margin-top: 3%;
 }
 
+.card1 {
+    display: grid;
+    font-family: 'Teko', sans-serif;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px 3px rgb(255, 255, 255);
+    text-align: center;
+    margin: 2%;
+    background-color: rgb(14, 181, 223, 0.7);
+    font-size: 23px;
+    color: white;
+    text-shadow: 20px rgb(0, 0, 0);
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 10%;
+}
 
-/* .main {
+.main {
     background-color: black;
-} */
+    overflow: hidden;
+}
 
 .sub {
     cursor: pointer;
@@ -188,14 +214,16 @@ header {
     font-size: 15px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    padding: 5px 5px;
+    padding: 3px 3px;
     border-radius: 5px;
     background-color: rgb(14, 181, 223);
     font-family: 'Teko', sans-serif;
+    box-shadow: 0px 0px 12px 3px rgb(0, 0, 0);
 }
 
 .sub:hover {
     color: rgb(0, 0, 0);
+    background-color: white;
 }
 
 .profileh1 {
@@ -203,12 +231,28 @@ header {
     align-items: center;
     display: flex;
     position: fixed;
-    top: 6px;
+    top: 40px;
     left: 6px;
+    font-family: 'Teko', sans-serif;
+    color: rgb(15, 129, 150);
+    letter-spacing: 3px;
+    font-size: 50px;
 }
 
 .profileh2 {
     justify-content: center;
     align-items: center;
     display: flex;
+    font-family: 'Teko', sans-serif;
+    color: white;
 }
+
+.ad {
+    background: black;
+    color: aqua;
+}
+
+
+/* .img11 {
+    height: 100%;
+} */
