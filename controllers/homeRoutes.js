@@ -28,12 +28,12 @@ router.get('/profile', withAuth, async (req, res) => {
     }
 })
 
-router.get('/team', async (req, res) => {
+router.get('/team', withAuth, async (req, res) => {
 //find all teams, map team data, render on homepage
-//const teamData = await Team.findAll
-//const teams = teamData.map((team) => team.get({plain:true}));
-//render should take in ,{teams, logged_in: req.session.logged_in}
- res.render('team')
+    const teamData = await Team.findAll()
+        const teams = teamData.map((team)=> team.get({plain: true}))
+    res.render('team', {teams,
+        logged_in: req.session.logged_in })
 })
 
 //render login if not logged in or profile if logged in
@@ -50,9 +50,8 @@ router.get('/signup', (req, res)=> {
 
 router.get('/about', async (req, res) => {
     try{     
-        const teamData = await Team.findAll()
-        const teams = teamData.map((team)=> team.get({plain: true}))
-         res.render('about', {teams: teams})
+        
+         res.render('about')
     } catch(err) {
         res.status(500).json(err);
     }
