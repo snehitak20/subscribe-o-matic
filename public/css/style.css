@@ -109,6 +109,7 @@ header {
     left: 0;
     top: 0;
     margin-top: -100px;
+    z-index: 99999;
 }
 
 .signinlogo {
@@ -230,17 +231,28 @@ header {
     align-items: center;
     display: flex;
     position: fixed;
-    top: 6px;
+    top: 40px;
     left: 6px;
+    font-family: 'Teko', sans-serif;
+    color: rgb(15, 129, 150);
+    letter-spacing: 3px;
+    font-size: 50px;
 }
 
 .profileh2 {
     justify-content: center;
     align-items: center;
     display: flex;
+    font-family: 'Teko', sans-serif;
+    color: white;
 }
 
 .ad {
     background: black;
     color: aqua;
 }
+
+
+/* .img11 {
+    height: 100%;
+} */
