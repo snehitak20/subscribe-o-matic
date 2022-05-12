@@ -23,59 +23,27 @@
         {{!-- <a href="/login" class="btn-area" id="logout">Logout</a> --}}
         <button class="btn-area" id="logout">Logout</button>
     </header>
+<<<<<<< HEAD
 
     <div class="card1">
-        <div class="card-image"></div>
-        <div class="card-text">
-            <span class="team">NBA TEAM</span>
-            <h2>WARRIORS</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, possimus.</p>
-        </div>
-        <div>
-            <button class="sub" id="subscription"><i class="fa-solid fa-envelope-circle-check"></i>subscribe to weekly
-                team news!</button>
-        </div>
-    </div>
-
+=======
+{{#each teams as |team|}}
     <div class="card">
+>>>>>>> 5a1e3d282aaa2f2e4f33455000423a336b67e702
         <div class="card-image"></div>
         <div class="card-text">
             <span class="team">NBA TEAM</span>
-            <h2>ROCKETS</h2>
+            <h2>{{team.teamName}}</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, possimus.</p>
         </div>
         <div>
-            <button class="sub" id="subscription"><i class="fa-solid fa-envelope-circle-check"></i>subscribe to weekly
+            <button class="sub subscription" id={{team.teamName}}><i class="fa-solid fa-envelope-circle-check"></i>subscribe to weekly {{team.teamName}}
                 team news!</button>
-        </div>
-
-    </div>
-
-    <div class="card">
-        <div class="card-image"></div>
-        <div class="card-text">
-            <span class="team">NBA TEAM</span>
-            <h2>LAKERS</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, possimus.</p>
-        </div>
-        <div>
-            <button class="sub" id="subscription"><i class="fa-solid fa-envelope-circle-check"></i>subscribe to weekly
-                team news!</button>
+           
         </div>
     </div>
-
-    <div class="card">
-        <div class="card-image"></div>
-        <div class="card-text">
-            <span class="team">NBA TEAM</span>
-            <h2>HEAT</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, possimus.</p>
-        </div>
-        <div>
-            <button class="sub" id="subscription"><i class="fa-solid fa-envelope-circle-check"></i>subscribe to weekly
-                team news!</button>
-        </div>
-    </div>
+{{/each}}
+   
 </div>
 
 <script src="./js/subscribe.js"></script>
