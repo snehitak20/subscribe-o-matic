@@ -5,7 +5,7 @@
 // NOTE: this is from the TEAM PAGE--> do NOT need to be sent to another page????
 // How to send email when button is clicked via nodemailer????
 const subscription = async () => {
-    const response = await fetch('/api/team/:id', {
+    const response = await fetch('/api/subscribe', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
     });
