@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Subscribe, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 const nodemailer = require('nodemailer');
+
 router.post('/', withAuth, async (req, res) => {
     try {
         const newSubscribe = await Subscribe.create({
@@ -9,7 +10,7 @@ router.post('/', withAuth, async (req, res) => {
             //team_id: req.body.team_id,   
         });
         //console.log(req.session.user_id)
-        //console.log(req.body.teamName)
+        console.log(req.body.teamName)
         //console.log(req.body.team_id)
         const userData = await User.findByPk(req.session.user_id, {
             attributes: {exclude: ['password']}
