@@ -17,15 +17,16 @@ router.get('/', async (req, res) => {
 //query api
 //})
 
-// router.get('/profile', withAuth, async (req, res) => {
-//     try{
-//         //find user data by id
-//         //include subscriptions
-//         //??query clientside api?
-//     } catch (err) {
-//         res.status(500).json(err);
-//     }
-// })
+router.get('/profile', withAuth, async (req, res) => {
+    try{
+        //find user data by id
+        //include subscriptions
+        //??query clientside api?
+        res.render('profile')
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
 
 router.get('/team', async (req, res) => {
 //find all teams, map team data, render on homepage
