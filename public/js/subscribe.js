@@ -8,9 +8,11 @@
 //const teamName = document.querySelector('#teamName').value; 
 //add body with stringified data for team name to associate team 
 // with subscription
-const subscription = async () => {
+const subscription = async (event) => {
+      console.log(event.target.id)
     const response = await fetch('/api/subscribe', {
           method: 'POST',
+          body: JSON.stringify({"teamName": event.target.id}),
           headers: { 'Content-Type': 'application/json' },
     });
 
@@ -20,6 +22,8 @@ const subscription = async () => {
           alert(response.statusText);
     }
 };
-
-document.querySelector('#subscription').addEventListener('click', subscription);
-
+for(var i=0; i<document.querySelectorAll('.subscription').length; i++ ){
+document.querySelectorAll('.subscription')[i].addEventListener('click', subscription);
+}
+console.log(document.querySelectorAll('.subscription'))
+//document.querySelectorAll('.subscription') is an array
