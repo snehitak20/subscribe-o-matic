@@ -1,5 +1,5 @@
 const router = require('express').Router();
-// const {User, Team, Subscribe} = require('../models');
+const {User, Team, Subscribe} = require('../models');
 const withAuth = require('../utils/auth');
 
 //render login 
@@ -48,8 +48,15 @@ router.get('/signup', (req, res)=> {
     res.render('signup')
 });
 
-router.get('/about', (req, res) => {
-    res.render('about')
+router.get('/about', async (req, res) => {
+    try{     
+        const teamData = await Team.findAll()
+        const teams = teamData.map((team)=> team.get({plain: true}))
+         res.render('about', {teams: teams})
+    } catch(err) {
+        res.status(500).json(err);
+    }
+    
 })
 
 module.exports = router;
