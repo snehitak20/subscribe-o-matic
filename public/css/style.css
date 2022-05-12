@@ -4,6 +4,16 @@
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
+    z-index: -1;
+}
+
+.testvideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
 }
 
 .form-area {
@@ -86,16 +96,36 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    justify-content: center;
     padding: 30px 70px;
     padding-top: 20px;
+    z-index: 9999;
+    font-family: 'Teko', sans-serif;
 }
 
 .logo {
     cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: -100px;
+}
+
+.signinlogo {
+    /* cursor: pointer; */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-bottom: -100px;
+    margin-left: -30px;
+    /* margin-left: 20%; */
 }
 
 .nav-area {
     list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-area li {
@@ -107,10 +137,10 @@ header {
 .nav-area li a {
     transition: .3s;
     color: rgb(0, 0, 0);
-    font-size: 15px;
+    font-size: 18px;
     letter-spacing: 8px;
     font-family: 'Teko', sans-serif;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .nav-area li a:hover {
@@ -120,13 +150,16 @@ header {
 .btn-area {
     cursor: pointer;
     color: rgb(255, 255, 255);
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 2px;
     text-transform: uppercase;
     padding: 10px 15px;
     border-radius: 5px;
     background-color: rgb(14, 181, 223);
     font-family: 'Teko', sans-serif;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .card {
@@ -136,15 +169,18 @@ header {
     box-shadow: 5px 5px 15px rgb(67, 181, 216);
     text-align: center;
     margin: 2%;
-    background-color: rgb(14, 181, 223);
+    background-color: rgb(14, 181, 223, 0.7);
     font-size: 23px;
     color: white;
     text-shadow: 20px rgb(0, 0, 0);
+    width: 30%;
+    margin-left: 35%;
 }
 
-.main {
+
+/* .main {
     background-color: black;
-}
+} */
 
 .sub {
     cursor: pointer;
@@ -160,4 +196,19 @@ header {
 
 .sub:hover {
     color: rgb(0, 0, 0);
+}
+
+.profileh1 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    top: 6px;
+    left: 6px;
+}
+
+.profileh2 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
