@@ -6,19 +6,19 @@ const nodemailer = require('nodemailer');
 router.post('/', withAuth, async (req, res) => {
     try {
         const newSubscribe = await Subscribe.create({
-            user_id: req.session.user_id,
-            //team_id: req.body.team_id,   
+            user_id: req.session.user_id,  
+            //team_name: req.body.team_name 
+            team_id: req.body.team_id
         });
-        //console.log(req.session.user_id)
-        console.log(req.body.teamName)
-        //console.log(req.body.team_id)
+        
         const userData = await User.findByPk(req.session.user_id, {
-            attributes: {exclude: ['password']}
+            attributes: {exclude: ['password']},
         })
         const user = userData.get({plain: true});
+       
+        console.log(user)
         async function main() {
             // let testAccount = await nodemailer.createTestAccount();
-
             const transporter = nodemailer.createTransport({
                 service: 'gmail',
                 auth: {
@@ -36,8 +36,7 @@ router.post('/', withAuth, async (req, res) => {
             console.log("Message sent: %s", info.messageId);
             console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
         } main().catch(console.error);
-        console.log(user.email)
-        console.log(user)
+        
         res.status(200).json(newSubscribe);
     } catch (err) {
         res.status(400).json(err); 

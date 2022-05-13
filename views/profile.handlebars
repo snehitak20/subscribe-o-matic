@@ -15,40 +15,27 @@
         <ul class="nav-area nav-main">
 
             <li><a href="/team">Home</a></li>
-            <li><a href="/about">About</a></li>
+            <li><a href="#">About</a></li>
             <button class="btn-area" id="logout">Logout</button>
 
         </ul>
     </nav>
 </header>
 <h2 class="profileh2">Your Current Subscriptions!</h2>
-
+{{!-- #each subscribe[i].teamSub --}}
+{{#if subscribes.length}}
+{{#each subscribes as |subscribe|}}
 <div class="card">
     <div class="card-image"></div>
-    <div class="card-text">
-        <span class="team">Currently subscribe to... </span>
-        <h2>WARRIORS</h2>
-        <p>The Golden State Warriors are an American professional basketball team based in San Francisco. The Warriors compete in the National Basketball Association, as a member of the league's Western Conference Pacific Division</p>
+
+        <div class="card-text">
+        <span class="team">NBA TEAM</span>
+        <h2>{{subscribe.team_id}}</h2>
+        </div>
+
     </div>
 </div>
-
-<div class="card">
-    <div class="card-image"></div>
-    <div class="card-text">
-        <span class="team">Currently subscribe to...</span>
-        <h2>LAKERS</h2>
-        <p>The Los Angeles Lakers are an American professional basketball team based in Los Angeles. The Lakers compete in the National Basketball Association as a member of the league's Western Conference Pacific Division.</p>
-    </div>
-</div>
-
-
-<div class="card">
-    <div class="card-image"></div>
-    <div class="card-text">
-        <span class="team">Currently subscribe to...</span>
-        <h2>HEAT</h2>
-        <p>The Miami Heat are an American professional basketball team based in Miami. The Heat compete in the National Basketball Association as a member of the league's Eastern Conference Southeast Division. The club plays its home games at FTX Arena, and has won three NBA championships.</p>
-    </div>
-</div>
+{{/each}}
+{{/if}}
 
 <script src="./js/logout.js"></script>
