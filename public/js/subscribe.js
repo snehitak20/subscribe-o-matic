@@ -9,10 +9,10 @@
 //add body with stringified data for team name to associate team 
 // with subscription
 const subscription = async (event) => {
-      console.log(event.target.id)
     const response = await fetch('/api/subscribe', {
           method: 'POST',
-          body: JSON.stringify({"teamName": event.target.id}),
+          body: JSON.stringify({"team_id": event.target.id}),
+          //body: JSON.stringify({"team_name": event.target.id}),
           headers: { 'Content-Type': 'application/json' },
     });
 

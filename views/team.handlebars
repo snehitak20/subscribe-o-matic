@@ -15,7 +15,7 @@
             <ul class="nav-area">
 
                 <li><a href="#">Home</a></li>
-                <li><a href="/about">About</a></li>
+                <li><a href="#">About</a></li>
                 <li><a href="/profile">Profile</a></li>
 
             </ul>
@@ -29,10 +29,11 @@
         <div class="card-text">
             <span class="team">NBA TEAM</span>
             <h2>{{team.teamName}}</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, possimus.</p>
         </div>
         <div>
-            <button class="sub subscription" id={{team.teamName}}><i class="fa-solid fa-envelope-circle-check"></i>subscribe to weekly {{team.teamName}}
+            
+            {{!-- id = team.teamName--}}
+            <button class="sub subscription" id={{team.id}}><i class="fa-solid fa-envelope-circle-check"></i>subscribe to weekly {{team.teamName}}
                 team news!</button>
            
         </div>
