@@ -3,11 +3,12 @@ const { Subscribe, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 const nodemailer = require('nodemailer');
 
+// POST route to create a new subscription
 router.post('/', withAuth, async (req, res) => {
     try {
         const newSubscribe = await Subscribe.create({
             user_id: req.session.user_id,  
-            //team_name: req.body.team_name 
+       
             team_id: req.body.team_id
         });
         
@@ -17,8 +18,8 @@ router.post('/', withAuth, async (req, res) => {
         const user = userData.get({plain: true});
        
         console.log(user)
+        //NodeMailer function here: email is sent when button is clicked
         async function main() {
-            // let testAccount = await nodemailer.createTestAccount();
             const transporter = nodemailer.createTransport({
                 service: 'gmail',
                 auth: {
