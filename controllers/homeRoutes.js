@@ -2,7 +2,7 @@ const router = require('express').Router();
 const {User, Team, Subscribe} = require('../models');
 const withAuth = require('../utils/auth');
 
-//render login 
+// GET route to render the login
 router.get('/', async (req, res) => {
     try {
         res.render('login')
@@ -11,12 +11,8 @@ router.get('/', async (req, res) => {
         res.status(500).json(err)
     }
 })
-//render a teams stats
-//router.get('/team/:id', async (req, res)=> {
-// find team data by id
-//query api
-//})
 
+// GET route to find the user and user data, and posting the information found to the profile page 
 router.get('/profile', withAuth, async (req, res) => {
     try{
         const userData = await User.findByPk(req.session.user_id, {
@@ -25,7 +21,7 @@ router.get('/profile', withAuth, async (req, res) => {
         })
         const user = userData.get({plain: true});
         console.log(user)
-        //subscribe[i].teamSub for team.handlebars 
+
         res.render('profile', {
             ...user,
             logged_in: true
@@ -35,15 +31,15 @@ router.get('/profile', withAuth, async (req, res) => {
     }
 })
 
+// GET route to find all teams, map team data, render on homepage
 router.get('/team', withAuth, async (req, res) => {
-//find all teams, map team data, render on homepage
     const teamData = await Team.findAll()
         const teams = teamData.map((team)=> team.get({plain: true}))
     res.render('team', {teams,
         logged_in: req.session.logged_in })
 })
 
-//render login if not logged in or profile if logged in
+// GET route to render login if not logged in or profile if logged in
 router.get('/login', (req, res) => {
     if (req.session.logged) {
         res.redirect('/team')
@@ -51,10 +47,12 @@ router.get('/login', (req, res) => {
     res.render('login')
 })
 
+// GET route for signup page
 router.get('/signup', (req, res)=> {
     res.render('signup')
 });
 
+// FUTURE ROUTE FOR ABOUT PAGE
 router.get('/about', async (req, res) => {
     try{     
         
